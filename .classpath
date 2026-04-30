@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="scr/" kind="src" path=""/>
+	<classpathentry kind="src" path="scr"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
