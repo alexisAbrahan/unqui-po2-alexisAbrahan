@@ -4,20 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Counter {
-	
-	private List<Integer> numbers = new ArrayList<Integer>();
-	
+
+	private List<Integer> numbers = new ArrayList<>();
+
 	public void addNumber(int number) {
-        this.numbers.add(number);
-    }
-	
+		this.numbers.add(number);
+	}
+
+	public int contarPares() {
+		return (int) numbers.stream()
+				.filter(n -> n % 2 == 0)
+				.count();
+	}
+
 	public int contarImpar() {
-		int cantidadImpares = 0;
-		for (int numero : numbers) {
-	        if (numero % 2 != 0) {
-	            cantidadImpares++;
-	        }
-		}
-		return cantidadImpares;
+		return (int) numbers.stream()
+				.filter(n -> n % 2 != 0)
+				.count();
+	}
+	public int cantidadDeMCde_(int numeroMultiplo){
+		return (int) numbers.stream()
+				.filter(n -> n % numeroMultiplo == 0)
+				.count();
 	}
 }
